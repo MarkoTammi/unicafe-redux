@@ -36,7 +36,7 @@ npm test
 6.1: unicafe revisited, step1 - git branch part6-01  
 Luotu redux/reducer ja sille testit.  
 
-6.2: unicafe revisited, step2  
+6.2: unicafe revisited, step2  - git branch part6-02  
 Unicafe varsinainen toiminnallisuus kuten tehtävät 1.6-1.11  
 
 

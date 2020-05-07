@@ -4,7 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
 import reducer from './reducer'
+
 import Statistics from './Components/Statistics';
+import Button from './Components/Button'
 
 const store = createStore(reducer)
 
@@ -13,11 +15,16 @@ const App = () => {
   return (
     <div>
       <h3 className="mb-5">Unicafe - redux</h3>
-      <button type="button" className="btn btn-outline-primary mr-1" onClick={e => store.dispatch({ type: 'GOOD' })}>Good</button> 
-      <button type="button" className="btn btn-outline-primary m-1" onClick={e => store.dispatch({ type: 'OK' })}>Neutral</button> 
-      <button type="button" className="btn btn-outline-primary m-1" onClick={e => store.dispatch({ type: 'BAD' })}>Bad</button>
-      <button type="button" className="btn btn-outline-primary m-1" onClick={e => store.dispatch({ type: 'ZERO' })}>Reset stats</button>
-      {(store.getState().good + store.getState().ok + store.getState().bad) !== 0 ? <Statistics store={store}/> :  <p className="mt-3">No votes given yet. Give your vote by pressing button!</p>}
+      
+      <Button store={store} type='GOOD' buttonText='Good'/>
+      <Button store={store} type='OK' buttonText='Neutral'/>
+      <Button store={store} type='BAD' buttonText='Bad'/>
+      <Button store={store} type='ZERO' buttonText='Reset stats'/>
+    
+      {(store.getState().good + store.getState().ok + store.getState().bad) !== 0 ? 
+          <Statistics store={store}/> :  
+          <p className="mt-3">No votes given yet. Give your vote by pressing button!</p>
+          }
     </div>
   )
 }

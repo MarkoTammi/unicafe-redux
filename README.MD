@@ -3,7 +3,11 @@
 
 ### Toiminnallisuus  
 
+Unicafe harjoitus siten, että sovelluksen tila käsitellään Reduxin avulla.  
+Mielipidekysely ruuan laadusta.  
 
+Front - react, bootstrap, redux  
+Backend - ei toiminnallisuutta  
  
 
 ### Luonti  
@@ -26,6 +30,8 @@ git push -u origin part6-01
 ### Käynnistys  
 Frontendin käynnistys  
 npm start  
+
+Ei ole backend toiminnallisuutta.  
 
 ### Testaus  
 Komennolla  
